@@ -1,0 +1,11 @@
+.equipmentContainer {
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.equipmentActions {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 32px;
+}

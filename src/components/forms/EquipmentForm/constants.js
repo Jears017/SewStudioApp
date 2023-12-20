@@ -1,0 +1,5 @@
+export const NAME = 'name'
+export const DATE_LAST_DELIVERY = 'dateOfLastDelivery'
+export const AMOUNT = 'amount'
+export const MEASUREMENT_UNIT = 'measurementUnit'
+export const COMMENT = 'comment'

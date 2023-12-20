@@ -1,0 +1,22 @@
+.equipmentFormWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.equipmentFormRow {
+  display: flex;
+  gap: 24px;
+}
+
+.equipmentTextfield {
+  width: 100%;
+  max-width: calc((100% - 24 * 1) / 2);
+}
+
+.actionsEquipmentForm {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 32px;
+}

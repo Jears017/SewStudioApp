@@ -1,0 +1,5 @@
+export const ANALYTICS_PAGE = '/analytics'
+export const ORDERS_PAGE = '/orders'
+export const PLANNING_PAGE = '/planning'
+export const EQUIPMENT_PAGE = '/equipment'
+export const CLIENTS_PAGE = '/clients'

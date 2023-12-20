@@ -1,0 +1,22 @@
+.ordersFormWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ordersFormRow {
+  display: flex;
+  gap: 24px;
+}
+
+.orderTextfield {
+  width: 100%;
+  max-width: calc((100% - 24 * 1) / 2);
+}
+
+.actionsOrdersForm {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 32px;
+}
