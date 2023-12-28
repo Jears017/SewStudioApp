@@ -9,16 +9,21 @@ import Paper from "@mui/material/Paper";
 import Row from "./Row";
 import { COLUMNS } from "./columns";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(name, lastDateUpdate, amount, measurementUnit) {
+  return { name, lastDateUpdate, amount, measurementUnit };
 }
 
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Ткань красная", '20.05.2023', 20, 'м.'),
+  createData("Шерсть серая", '15.06.2023', 8, 'м.'),
+  createData("Кнопки разноцветные", '10.07.2023', 50, 'шт.'),
+  createData("Нитки черные", '25.08.2023', 5, 'кат.'),
+  createData("Замок-молния металлический", '30.09.2023', 2, 'шт.'),
+  createData("Кружево белое", '05.10.2023', 12, 'м.'),
+  createData("Игла для шитья", '12.11.2023', 3, 'шт.'),
+  createData("Линейка пластиковая", '18.12.2023', 1, 'шт.'),
+  createData("Бисер разноцветный", '24.01.2024', 100, 'г.'),
+  createData("Прокладка подплечника", '30.02.2024', 10, 'шт.'),
 ];
 
 const Table = () => {

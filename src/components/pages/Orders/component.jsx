@@ -6,6 +6,8 @@ import BasicLayout from "../../common/BasicLayout";
 import Table from "./Table";
 import OrderModal from "./OrderModal";
 import "./styles.css";
+import OrdersFilter from "../../forms/OrdersFilter";
+import PlusIcon from '../../../assets/icons/Plus'
 
 const Orders = () => {
   const [open, setOpen] = useState(false);
@@ -17,8 +19,11 @@ const Orders = () => {
       <div className="order-container">
         <div className="order-actions">
           <Button variant="contained" onClick={handleOpen}>
-            + Оформить заказ
+            <PlusIcon className='plusIcon'/> Оформить заказ
           </Button>
+        </div>
+        <div>
+          <OrdersFilter />
         </div>
         <Table />
       </div>

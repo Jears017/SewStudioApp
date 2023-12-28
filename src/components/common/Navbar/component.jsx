@@ -10,20 +10,20 @@ const Navbar = ({ className }) => {
     <div className={className}>
       <div className="nav-container">
         <Link to={"/"}>
-          <div className="nav-item">Заказы</div>
+          <div className="nav-item ">Заказы</div>
         </Link>
         <Link to={EQUIPMENT_PAGE}>
           <div className="nav-item">Инвентарь</div>
         </Link>
         <Link to={PLANNING_PAGE}>
-          <div className="nav-item">Планирование</div>
+          <div className="nav-item ">Планирование</div>
         </Link>
         <Link to={ANALYTICS_PAGE}>
-          <div className="nav-item">Аналитика</div>
+          <div className="nav-item active">Аналитика</div>
         </Link>
-        <Link to={CLIENTS_PAGE}>
+        {/* <Link to={CLIENTS_PAGE}>
           <div className="nav-item">Клиенты</div>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

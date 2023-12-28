@@ -1,7 +1,9 @@
 import React from "react";
 import { useFormik } from "formik";
 import { Button, TextField } from "@mui/material";
-import DatePicker from "react-datepicker";
+import moment from "moment";
+import DatePicker from "../../controls";
+
 import "./styles.css";
 
 const OrdersForm = ({ handleClose }) => {
@@ -9,8 +11,8 @@ const OrdersForm = ({ handleClose }) => {
     initialValues: {
       name: "Турбан Александр Владимирович",
       number: "255128788",
-      dateStart: "12.02.2023",
-      dateEnd: "22.02.2023",
+      dateStart: null,
+      dateEnd: null,
       product: "Рубашка",
       typeOfWork: "Ремонт",
       price: "15",
@@ -53,23 +55,26 @@ const OrdersForm = ({ handleClose }) => {
             />
           </div>
           <div className="ordersFormRow">
-            <TextField
-              id="dateStart"
+            <DatePicker
               name="dateStart"
-              label="Дата готового изделия"
+              label="Дата принятия изделия"
               value={formik.values.dateStart}
-              onChange={formik.handleChange}
+              onChange={(value) => {
+                formik.setFieldValue("dateStart", moment(value));
+              }}
               onBlur={formik.handleBlur}
               error={formik.touched.dateStart && Boolean(formik.errors.dateStart)}
               helperText={formik.touched.dateStart && formik.errors.dateStart}
               className="orderTextfield"
             />
-            <TextField
+            <DatePicker
               id="dateEnd"
               name="dateEnd"
               label="Дата готового изделия"
               value={formik.values.dateEnd}
-              onChange={formik.handleChange}
+              onChange={(value) => {
+                formik.setFieldValue("dateEnd", moment(value));
+              }}
               onBlur={formik.handleBlur}
               error={formik.touched.dateEnd && Boolean(formik.errors.dateEnd)}
               helperText={formik.touched.dateEnd && formik.errors.dateEnd}

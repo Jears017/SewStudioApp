@@ -1,0 +1,5 @@
+.equipmentsFilterContainer {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 32px;
+}

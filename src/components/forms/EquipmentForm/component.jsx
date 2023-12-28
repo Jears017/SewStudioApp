@@ -1,16 +1,17 @@
 import React from "react";
 import { useFormik } from "formik";
 import { Button, TextField } from "@mui/material";
-import DatePicker from "react-datepicker";
 
 import { NAME, DATE_LAST_DELIVERY, AMOUNT, MEASUREMENT_UNIT, COMMENT } from "./constants";
 import "./styles.css";
+import DatePicker from "../../controls";
+import moment from "moment";
 
 const EquipmentForm = ({ handleClose }) => {
   const formik = useFormik({
     initialValues: {
       name: "Турбан Александр Владимирович",
-      dateOfLastDelivery: "12.02.2023",
+      dateOfLastDelivery: null,
       measurementUnit: "кг",
       amount: "15",
       comment: "",
@@ -36,11 +37,13 @@ const EquipmentForm = ({ handleClose }) => {
               helperText={formik.touched[NAME] && formik.errors[NAME]}
               className="equipmentTextfield"
             />
-            <TextField
+            <DatePicker
               name={DATE_LAST_DELIVERY}
               label="Дата последней поставки"
               value={formik.values[DATE_LAST_DELIVERY]}
-              onChange={formik.handleChange}
+              onChange={(value) => {
+                formik.setFieldValue(DATE_LAST_DELIVERY, moment(value));
+                }}
               onBlur={formik.handleBlur}
               error={
                 formik.touched[DATE_LAST_DELIVERY] && Boolean(formik.errors[DATE_LAST_DELIVERY])
