@@ -4,7 +4,7 @@
   box-shadow: 0px 4px 14px rgb(0 0 0 / 6%);
   height: 100%;
   position: fixed;
-  /* overflow: hidden; */
+  padding-top: 80px;
 }
 .nav-container > a {
   text-decoration: none;
@@ -25,4 +25,8 @@
   color: black;
   background-color: #F7F7F7;
   border-bottom: 1px solid #F7F7F7;
+}
+
+.mainContent {
+  padding-top: 90px;
 }

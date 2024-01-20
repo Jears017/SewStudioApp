@@ -10,10 +10,32 @@
 
 .header {
   grid-area: header;
-  background-color: #333;
   color: #fff;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: #333;
+  height: 70px;
   padding: 20px 56px;
-  height: 60px;
+  z-index: 10;
+}
+
+.icon {
+  color: white;
+}
+
+.loginLink {
+  color: white;
+  display: flex;
+}
+
+.logout {
+  margin-top: 40px;
 }
 
 .navbar {

@@ -1,0 +1,13 @@
+.loginField {
+  padding-bottom: 20px;
+}
+
+.field {
+  padding-top: 20px;
+  width: 400px;
+}
+
+.authActions {
+  display: flex;
+  gap: 12px;
+}
